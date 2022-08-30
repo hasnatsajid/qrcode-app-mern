@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include ("../partials/commonhead") %>
+    <script src="https://cdn.ckeditor.com/ckeditor5/27.0.0/classic/ckeditor.js"></script>
+  </head>
+
+  <body class="bg-light">
+    <div class="d-flex" id="wrapper">
+      <%- include ("../partials/sidebar") %>
+      <div class="page-content-wrapper w-100">
+        <%- include ("../partials/header") %>
+        <div class="container-fluid pt-3">
+          <h1 class="mb-4 text-center">Update Order</h1>
+          <div class="row">
+            <div class="col-lg-7 mx-auto">
+              <div class="card p-3">
+                <form action="/admin/order/edit" method="POST" data-parsley-validate>
+                  <div class="row">
+                    <div class="form-group col-lg-6">
+                      <input type="hidden" name="id" value="<%= order._id%>">
+                      <label for="name" class="mb-0">First Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="firstName"
+                        id="title"
+                        value="<%= order.firstName%>"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-lg-6">
+                      <label for="name" class="mb-0">Last Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="lastName"
+                        id="title"
+                        value="<%= order.lastName%>"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-lg-6">
+                      <label for="name" class="mb-0">Email</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="email"
+                        id="title"
+                        value="<%= order.email%>"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-lg-6">
+                      <label for="name" class="mb-0">Phone</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="phone"
+                        id="title"
+                        value="<%= order.phone%>"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-lg-6">
+                      <label for="name" class="mb-0">City</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="city"
+                        id="title"
+                        value="<%= order.city%>"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-lg-6">
+                      <label for="name" class="mb-0">State</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="state"
+                        id="title"
+                        value="<%= order.state%>"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-lg-6">
+                      <label for="name" class="mb-0">ZipCode</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="zipCode"
+                        id="title"
+                        value="<%= order.zipCode%>"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-lg-6">
+                      <label for="name" class="mb-0">Country</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="country"
+                        value="<%= order.country%>"
+                        id="title"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-lg-6">
+                      <label for="name" class="mb-0">Address</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="address"
+                        value="<%= order.address%>"
+                        id="title"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-lg-6">
+                      <label for="name" class="mb-0">Amount</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="amount"
+                        value="<%= order.amount%>"
+                        id="title"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-lg-6">
+                      <label for="name" class="mb-0">QR Image Link</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="qrImageLink"
+                        value="<%= order.qrImageLink%>"
+                        id="title"
+                        required
+                      />
+                    </div>
+
+                    <div class="form-group col-lg-6">
+                      <label for="name" class="mb-0">Status</label>
+                      <select id="title" name="status" class="form-control" value="<%= order.status%>" required>
+                        <option value="paid" <%= order.status == 'paid' ? 'selected' : ''%>>Paid</option>
+                        <option value="shipped" <%= order.status == 'shipped' ? 'selected' : ''%>>Shipped</option>
+                        <option value="deliverd" <%= order.status == 'deliverd' ? 'selected' : ''%>>Deliverd</option>
+                        <option value="completed" <%= order.status == 'completed' ? 'selected' : ''%>>Completed</option>
+                      </select>
+                    </div>
+                    
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col-lg-3 offset-lg-3">
+                      <button class="btn btn-theme btn-block">Update</button>
+                    </div>
+                    <div class="col-lg-3">
+                      <a class="btn btn-theme btn-theme-secondary btn-block" onclick="window.history.back()">Cancel</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%- include ("../partials/commonscripts") %>
+    <script>
+      $(document).ready(function () {
+        ClassicEditor.create(document.querySelector('#longDescription'));
+        
+        $('select[name="type"]').change(function (e) {
+          e.preventDefault();
+          const selectedType = $(this).val();
+          if (selectedType == 'Carbon Removal') {
+            $('.column-money').css('display', 'block');
+            $('label[for="carbonRatio"]').text('Money to Carbon Ratio');
+          } else if (selectedType == 'Advocacy') {
+            $('.column-money').css('display', 'block');
+            $('label[for="carbonRatio"]').text('Hours to Carbon Ratio');
+          } else if (selectedType == 'Volunteering Opportunities') {
+            $('input[name="carbonRatio"]').val('0');
+            $('.column-money').css('display', 'none');
+          }
+        });
+
+        $('select[name="type"]').trigger('change');
+
+        $('input[name="image"]').change(function (e) {
+          readURL(this);
+        });
+      });
+
+      function readURL(input) {
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+
+          reader.onload = function (e) {
+            $('img.img-fluid').attr('src', e.target.result);
+          };
+
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+    </script>
+  </body>
+</html>

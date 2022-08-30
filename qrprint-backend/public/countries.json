@@ -1,0 +1,261 @@
+[{
+        "name": "Agentina",
+        "value": 8
+    },
+    {
+        "name": "Australia",
+        "value": 21.1
+    },
+    {
+        "name": "Austria",
+        "value": 9
+    },
+    {
+        "name": "Bahamas",
+        "value": 10.2
+    },
+    {
+        "name": "Bangladesh",
+        "value": 3.6
+    },
+    {
+        "name": "Belgium",
+        "value": 9.8
+    },
+    {
+        "name": "Bermuda",
+        "value": 8.7
+    },
+    {
+        "name": "Brazil",
+        "value": 11.3
+    },
+    {
+        "name": "Bulgaria",
+        "value": 8.6
+    },
+    {
+        "name": "Canada",
+        "value": 19.4
+    },
+    {
+        "name": "Chile",
+        "value": 6.9
+    },
+    {
+        "name": "China",
+        "value": 8.3
+    },
+    {
+        "name": "Colombia",
+        "value": 5.1
+    },
+    {
+        "name": "Costa Rica",
+        "value": 4.5
+    },
+    {
+        "name": "Croatia",
+        "value": 7.3
+    },
+    {
+        "name": "Czech Republic",
+        "value": 10.7
+    },
+    {
+        "name": "Denmark",
+        "value": 8.4
+    },
+    {
+        "name": "Dominican Republic",
+        "value": 4.8
+    },
+    {
+        "name": "Egypt",
+        "value": 4.81
+    },
+    {
+        "name": "Finland",
+        "value": 10.3
+    },
+    {
+        "name": "France",
+        "value": 7.31
+    },
+    {
+        "name": "Gaza and West Bank",
+        "value": 3
+    },
+    {
+        "name": "Germany",
+        "value": 9.7
+    },
+    {
+        "name": "Greece",
+        "value": 8.5
+    },
+    {
+        "name": "Haiti",
+        "value": 3.5
+    },
+    {
+        "name": "Hong Kong",
+        "value": 7.6
+    },
+    {
+        "name": "Hungary",
+        "value": 6.8
+    },
+    {
+        "name": "Iceland",
+        "value": 12.4
+    },
+    {
+        "name": "India",
+        "value": 4.31
+    },
+    {
+        "name": "Indonesia",
+        "value": 4.7
+    },
+    {
+        "name": "Ireland",
+        "value": 10.6
+    },
+    {
+        "name": "Israel",
+        "value": 8.6
+    },
+    {
+        "name": "Italy",
+        "value": 7.7
+    },
+    {
+        "name": "Jamaica",
+        "value": 6.1
+    },
+    {
+        "name": "Japan",
+        "value": 9.8
+    },
+    {
+        "name": "Luxembourg",
+        "value": 15.4
+    },
+    {
+        "name": "Mexico",
+        "value": 6
+    },
+    {
+        "name": "Morocco",
+        "value": 4.3
+    },
+    {
+        "name": "Netherlands",
+        "value": 9.7
+    },
+    {
+        "name": "New Zealand",
+        "value": 12.5
+    },
+    {
+        "name": "Nigeria",
+        "value": 3.91
+    },
+    {
+        "name": "Norway",
+        "value": 10
+    },
+    {
+        "name": "Pakistan",
+        "value": 4.1
+    },
+    {
+        "name": "Peru",
+        "value": 4.4
+    },
+    {
+        "name": "Philippines",
+        "value": 3.9
+    },
+    {
+        "name": "Poland",
+        "value": 9.4
+    },
+    {
+        "name": "Puerto Rico",
+        "value": 3.6
+    },
+    {
+        "name": "Portugal",
+        "value": 7.1
+    },
+    {
+        "name": "Qatar",
+        "value": 25.8
+    },
+    {
+        "name": "Romania",
+        "value": 6.6
+    },
+    {
+        "name": "Russia",
+        "value": 14.3
+    },
+    {
+        "name": "Saudi Arabia",
+        "value": 12.1
+    },
+    {
+        "name": "Singapore",
+        "value": 8.8
+    },
+    {
+        "name": "South Africa",
+        "value": 8.21
+    },
+    {
+        "name": "South Korea",
+        "value": 10.6
+    },
+    {
+        "name": "Spain",
+        "value": 7.4
+    },
+    {
+        "name": "Sweden",
+        "value": 6.8
+    },
+    {
+        "name": "Switzerland",
+        "value": 6.7
+    },
+    {
+        "name": "Thailand",
+        "value": 6.71
+    },
+    {
+        "name": "Turkey",
+        "value": 6.2
+    },
+    {
+        "name": "Ukraine",
+        "value": 8.3
+    },
+    {
+        "name": "United Kingdom",
+        "value": 8.2
+    },
+    {
+        "name": "United States",
+        "value": 14.4
+    },
+    {
+        "name": "Vietnam",
+        "value": 4.9
+    },
+    {
+        "name": "Other",
+        "value": 6
+    }
+]

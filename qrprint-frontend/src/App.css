@@ -1,0 +1,48 @@
+/* @font-face {
+  font-family: BAHNSCHRIFT;
+  src: url("/src/fonts/BAHNSCHRIFT.TTF");
+} */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+:root {
+  --MainColor: #0172fe;
+  --LightColor: #ffffff;
+  --LightSmoke: #f6f6f6;
+  --LightSmokeSecondary: #bab7b7;
+  --DarkColor: #000000;
+  --DarkSecondary: #30302f;
+  --PrimaryColor: #5a31f4;
+  --SecondaryColor: #f6fb08;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+button > span {
+  font-family: "Playfair Display", serif;
+}
+a,
+p,
+span,
+input,
+input::placeholder {
+  font-family: "Roboto", sans-serif;
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+.ant-dropdown-menu-title-content {
+  width: 100%;
+}

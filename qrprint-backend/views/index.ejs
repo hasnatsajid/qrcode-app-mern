@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include ("partials/commonhead") %>
+  </head>
+
+  <body class="bg-light">
+    <div class="d-flex" id="wrapper">
+      <%- include ("partials/sidebar") %>
+      <div class="page-content-wrapper w-100">
+        <%- include ("partials/header") %>
+        <div class="container-fluid">
+          <h1 class="mt-4 text-center">Welcome to</h1>
+          <h1 class="mb-4 text-center">Admin Dashboard</h1>
+          <div class="row">
+            <div class="col-lg-3 mb-2">
+              <div class="card">
+                <div class="card-body">
+                  <a class="btn btn-theme btn-block" href="/admin/order/all"
+                    ><i class="fas fa-trophy mr-2"></i> Orders</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 mb-2">
+              <div class="card">
+                <div class="card-body">
+                  <a class="btn btn-theme btn-block" href="/admin/qrcode/generate"
+                    ><i class="fas fa fa-qrcode mr-2"></i> Generate QRCode</a
+                  >
+                </div>
+              </div>
+            </div>
+            
+            <!-- <div class="col-lg-3 mb-2">
+              <div class="card">
+                <div class="card-body">
+                  <a class="btn btn-theme btn-block" href="/admin/support-tickets"
+                    ><i class="fas fa-ticket-alt mr-2"></i> Support Tickets</a
+                  >
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <%- include ("partials/commonscripts") %>
+  </body>
+</html>

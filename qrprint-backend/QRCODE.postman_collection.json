@@ -1,0 +1,45 @@
+{
+	"info": {
+		"_postman_id": "dcd1e2a5-87d9-413a-870e-316c3f174cbe",
+		"name": "QRCODE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/api/v1/order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Nouman\",\r\n    \"lastName\": \"Arain\",\r\n    \"email\": \"noumanarin0@gmail.com\",\r\n    \"country\":\"pakistan\",\r\n    \"phone\": \"232323232\",\r\n    \"city\": \"Sukkur\",\r\n    \"state\": \"Alaska\",\r\n    \"zipCode\": \"2323324\",\r\n    \"address\": \"dmfksfjdsbfhkdbs\",\r\n    \"amount\":\"100\",\r\n    \"qrImageLink\":\"232sdsfdds/dfsdf\",\r\n    \"paymentId\": \"dfdsfsdf453df\",\r\n    \"status\": \"completed\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3000/api/v1/order"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/v1/qrcode/generate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ssid\": \"Hello world\",\r\n  \"password\": \"testpass\",\r\n  \"encryption\": \"WPA\",\r\n  \"hiddenSSID\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3000/api/v1/qrcode/generate"
+			},
+			"response": []
+		}
+	]
+}

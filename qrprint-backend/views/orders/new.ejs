@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include ("../partials/commonhead") %>
+    <script src="https://cdn.ckeditor.com/ckeditor5/27.0.0/classic/ckeditor.js"></script>
+  </head>
+
+  <body class="bg-light">
+    <div class="d-flex" id="wrapper">
+      <%- include ("../partials/sidebar") %>
+      <div class="page-content-wrapper w-100">
+        <%- include ("../partials/header") %>
+        <div class="container-fluid pt-3">
+          <h1 class="mb-4 text-center">New Order</h1>
+          <%- include ("../partials/messages") %>
+          <div class="row">
+            <div class="col-lg-7 mx-auto">
+              <div class="card p-3">
+                <form
+                  action="/admin/order"
+                  method="POST"
+                  data-parsley-validate
+                >
+                  <div class="row">
+                    <div class="form-group col-lg-6">
+                      <label for="name" class="mb-0">First Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="firstName"
+                        id="title"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-lg-6">
+                      <label for="name" class="mb-0">Last Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="lastName"
+                        id="title"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-lg-6">
+                      <label for="name" class="mb-0">Email</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="email"
+                        id="title"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-lg-6">
+                      <label for="name" class="mb-0">Phone</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="phone"
+                        id="title"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-lg-6">
+                      <label for="name" class="mb-0">City</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="city"
+                        id="title"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-lg-6">
+                      <label for="name" class="mb-0">State</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="state"
+                        id="title"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-lg-6">
+                      <label for="name" class="mb-0">ZipCode</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="zipCode"
+                        id="title"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-lg-6">
+                      <label for="name" class="mb-0">Country</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="country"
+                        id="title"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-lg-6">
+                      <label for="name" class="mb-0">Address</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="address"
+                        id="title"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-lg-6">
+                      <label for="name" class="mb-0">amount</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="amount"
+                        id="title"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-lg-6">
+                      <label for="name" class="mb-0">QR Image Link</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="qrImageLink"
+                        id="title"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-lg-6">
+                      <label for="name" class="mb-0">Status</label>
+                      <select id="title" name="status" class="form-control" required>
+                        <option value="paid">Paid</option>
+                        <option value="shipped">Shipped</option>
+                        <option value="deliverd">Deliverd</option>
+                        <option value="completed">Completed</option>
+                      </select>
+                    </div>
+                    <input type="hidden" name="host" id="host" value=""/>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col-lg-3 offset-lg-3">
+                      <button class="btn btn-theme btn-block">Add</button>
+                    </div>
+                    <div class="col-lg-3">
+                      <a
+                        class="btn btn-theme btn-theme-secondary btn-block"
+                        onclick="window.history.back()"
+                        >Cancel</a
+                      >
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%- include ("../partials/commonscripts") %>
+    <script>
+      $(document).ready(function () {
+        $('select[name="type"]').change(function (e) {
+          e.preventDefault();
+          const selectedType = $(this).val();
+          if (selectedType == "Carbon Removal") {
+            $(".column-money").css("display", "block");
+            $('label[for="carbonRatio"]').text("Money to Carbon Ratio");
+          } else if (selectedType == "Advocacy") {
+            $(".column-money").css("display", "block");
+            $('label[for="carbonRatio"]').text("Hours to Carbon Ratio");
+          } else if (selectedType == "Volunteering Opportunities") {
+            $('input[name="carbonRatio"]').val("0");
+            $(".column-money").css("display", "none");
+          } else if (selectedType == "Products & Services") {
+            $('input[name="carbonRatio"]').val("0");
+            $(".column-money").css("display", "none");
+          }
+        });
+
+        ClassicEditor.create(document.querySelector("#longDescription"));
+      });
+    </script>
+  </body>
+  <script>
+    document.getElementById("host").value = window.location.origin;
+  </script>
+</html>

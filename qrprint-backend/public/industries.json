@@ -1,0 +1,121 @@
+[{
+        "name": "Average",
+        "value": 1
+    },
+    {
+        "name": "Energy - Cleantech and Renewables",
+        "value": 1.34
+    },
+    {
+        "name": "Energy - Coal, Oil & Gas",
+        "value": 5
+    },
+    {
+        "name": "Education - K-12 School",
+        "value": 0.95
+    },
+    {
+        "name": "Education - College or University",
+        "value": 1.16
+    },
+    {
+        "name": "Film/TV/Media",
+        "value": 0.65
+    },
+    {
+        "name": "Government (Non-Military)",
+        "value": 0.67
+    },
+    {
+        "name": "Healthcare",
+        "value": 1.13
+    },
+    {
+        "name": "Hotel/Hospitality/Tourism",
+        "value": 1.36
+    },
+    {
+        "name": "Internet/Tech/E-Commerce",
+        "value": 0.5
+    },
+    {
+        "name": "Manufacturing - Chemicals",
+        "value": 1.98
+    },
+    {
+        "name": "Manufacturing - Clothing and Apparel",
+        "value": 2.4
+    },
+    {
+        "name": "Manufacturing - CPG and Household",
+        "value": 2.02
+    },
+    {
+        "name": "Manufacturing - Electronics",
+        "value": 2.05
+    },
+    {
+        "name": "Manufacturing - Food",
+        "value": 2.13
+    },
+    {
+        "name": "Manufacturing - Industrial",
+        "value": 2.15
+    },
+    {
+        "name": "Manufacturing - Metal",
+        "value": 2.04
+    },
+    {
+        "name": "Manufacturing - Transportation",
+        "value": 1.87
+    },
+    {
+        "name": "Manufacturing - Wood/Lumber/Paper",
+        "value": 1.98
+    },
+    {
+        "name": "Non-Profit",
+        "value": 0.65
+    },
+    {
+        "name": "Restaurant",
+        "value": 1.05
+    },
+    {
+        "name": "Retail - Apparel, Clothing and Consumer",
+        "value": 0.45
+    },
+    {
+        "name": "Retail - Automotive and Transporation",
+        "value": 0.51
+    },
+    {
+        "name": "Retail - Big Box Store",
+        "value": 0.57
+    },
+    {
+        "name": "Retail - Grocery & Food",
+        "value": 1.13
+    },
+    {
+        "name": "Retail - Other/Misc",
+        "value": 0.45
+    },
+    {
+        "name": "Services - Advertising/Consulting",
+        "value": 0.72
+    },
+    {
+        "name": "Services - Finance/Insurance/Real Estate",
+        "value": 1.34
+    },
+    {
+        "name": "Services - Other/Misc",
+        "value": 0.55
+    },
+    {
+        "name": "Transportation and Travel",
+        "value": 1.87
+    }
+]

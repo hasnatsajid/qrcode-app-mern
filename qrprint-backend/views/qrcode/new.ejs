@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include ("../partials/commonhead") %>
+    <script src="https://cdn.ckeditor.com/ckeditor5/27.0.0/classic/ckeditor.js"></script>
+  </head>
+
+  <body class="bg-light">
+    <div class="d-flex" id="wrapper">
+      <%- include ("../partials/sidebar") %>
+      <div class="page-content-wrapper w-100">
+        <%- include ("../partials/header") %>
+        <div class="container-fluid pt-3">
+          <h1 class="mb-4 text-center">New Order</h1>
+          <%- include ("../partials/messages") %>
+          <div class="row">
+            <div class="col-lg-7 mx-auto">
+              <div class="card p-3">
+                <form
+                  action="/admin/qrcode"
+                  method="POST"
+                  data-parsley-validate
+                >
+                  <div class="row">
+                    <div class="form-group col-lg-6">
+                      <label for="ssid" class="mb-0">SSID</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="ssid"
+                        id="title"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-lg-6">
+                      <label for="password" class="mb-0">Password</label>
+                      <input
+                        type="password"
+                        class="form-control"
+                        name="password"
+                        id="title"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-lg-6">
+                      <label for="encryption" class="mb-0">Encryption</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="encryption"
+                        id="title"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-lg-6">
+                      <label for="name" class="mb-0">Hidden-SSID</label>
+                      <select id="title" name="hiddenSSID" class="form-control" required>
+                        <option value="true">True</option>
+                        <option value="false">False</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col-lg-3 offset-lg-3">
+                      <button class="btn btn-theme btn-block">Create</button>
+                    </div>
+                    <div class="col-lg-3">
+                      <a
+                        class="btn btn-theme btn-theme-secondary btn-block"
+                        onclick="window.history.back()"
+                        >Cancel</a
+                      >
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%- include ("../partials/commonscripts") %>
+    <script>
+      $(document).ready(function () {
+        $('select[name="type"]').change(function (e) {
+          e.preventDefault();
+          const selectedType = $(this).val();
+          if (selectedType == "Carbon Removal") {
+            $(".column-money").css("display", "block");
+            $('label[for="carbonRatio"]').text("Money to Carbon Ratio");
+          } else if (selectedType == "Advocacy") {
+            $(".column-money").css("display", "block");
+            $('label[for="carbonRatio"]').text("Hours to Carbon Ratio");
+          } else if (selectedType == "Volunteering Opportunities") {
+            $('input[name="carbonRatio"]').val("0");
+            $(".column-money").css("display", "none");
+          } else if (selectedType == "Products & Services") {
+            $('input[name="carbonRatio"]').val("0");
+            $(".column-money").css("display", "none");
+          }
+        });
+
+        ClassicEditor.create(document.querySelector("#longDescription"));
+      });
+    </script>
+  </body>
+  <script>
+    document.getElementById("host").value = window.location.origin;
+  </script>
+</html>
